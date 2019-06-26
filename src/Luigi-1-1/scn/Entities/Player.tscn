@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cod/Entities/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://img/mario.png" type="Texture" id=2]
+[ext_resource path="res://cod/Entities/Player/Alive.gd" type="Script" id=3]
+[ext_resource path="res://cod/Entities/Player/Dead.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.12033, 8 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 184, -136 )
+z_index = 100
+collision_layer = 2
+collision_mask = 13
+collision/safe_margin = 0.02
+script = ExtResource( 1 )
+region_small = Rect2( 80, 128, 16, 16 )
+region_normal = Rect2( 80, 96, 16, 32 )
+region_flower = Rect2( 80, 48, 16, 32 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 80, 128, 16, 16 )
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.25, 0.25 )
+limit_left = 0
+limit_bottom = 0
+smoothing_speed = 20.0
+
+[node name="States" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Alive" type="Node" parent="States"]
+script = ExtResource( 3 )
+
+[node name="Dead" type="Node" parent="States"]
+script = ExtResource( 4 )
+
+[node name="SafeTimeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+[connection signal="timeout" from="SafeTimeTimer" to="." method="_on_SafeTimeTimer_timeout"]
