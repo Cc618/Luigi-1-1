@@ -1,12 +1,8 @@
 # Luigi 1 - 1
 
----
-
 ### *The first level of Mario Bros without Mario !*
 
 ![screenshot](images/main.jpg)
-
----
 
 ## Controls :
 
@@ -15,8 +11,6 @@
 - **Space** : Action button (fireball)
 
 - **R** : Reset the game
-
----
 
 ## Features :
 
@@ -33,8 +27,6 @@
 - All assets are included in src/*
 
 - Fun !
-
----
 
 ## Notes :
 
