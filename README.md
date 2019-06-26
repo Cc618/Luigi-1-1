@@ -1,22 +1,24 @@
-Luigi 1 - 1
+# Luigi 1 - 1
 
-=============
+---
 
-The first level of Mario Bros without Mario !
+### *The first level of Mario Bros without Mario !*
 
 ![screenshot](images/main.jpg)
 
-CONTROLS:
+---
 
-- Arrows : Movement + Jump
+## Controls :
 
-- Space : Action button (fireball)
+- **Arrows** : Movement + Jump
 
-- R : Reset the game
+- **Space** : Action button (fireball)
 
-=============
+- **R** : Reset the game
 
-Features:
+---
+
+## Features :
 
 - A playable charcter handled by a kinematic body
 
@@ -32,12 +34,14 @@ Features:
 
 - Fun !
 
-=============
+---
 
-This game is inspired by this repo by Justin Meister : https://github.com/justinmeister/Mario-Level-1, many assets come from here.
+## Notes :
 
-Like this repo, this project is intended for non-commercial educational purposes.
+- This game is inspired by this repo by Justin Meister : [Mario Level 1](https://github.com/justinmeister/Mario-Level-1 "Mario Level 1"), many assets come from here.
 
-This project is not completed but is still on GitHub for education and fun.
+- Like this repo, this project is intended for non-commercial educational purposes.
 
-I have made this project to discover Godot, the game works but may be more optimized and also much more code-designed.
+- This project is not completed but is still on GitHub for education and fun.
+
+- I have made this project to discover Godot, the game works but may be more optimized and also much more code-designed.
